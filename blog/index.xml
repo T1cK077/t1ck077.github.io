@@ -10,6 +10,13 @@
     <lastBuildDate>Thu, 07 Sep 2023 16:27:22 +0200</lastBuildDate>
     <atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>123123123</title>
+      <link>/blog/123123123/</link>
+      <pubDate>Thu, 07 Sep 2023 16:27:22 +0200</pubDate>
+      <guid>/blog/123123123/</guid>
+      <description>You can use blog posts for announcing product updates and features.</description>
+    </item>
+    <item>
       <title>Example Post</title>
       <link>/blog/example-post/</link>
       <pubDate>Thu, 07 Sep 2023 16:27:22 +0200</pubDate>
