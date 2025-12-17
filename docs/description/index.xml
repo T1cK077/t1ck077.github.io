@@ -10,11 +10,11 @@
     <lastBuildDate>Wed, 17 Dec 2025 00:34:00 +0800</lastBuildDate>
     <atom:link href="/docs/description/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Description</title>
-      <link>/docs/description/description/</link>
+      <title>Description - 解释</title>
+      <link>/docs/description/description-%E8%A7%A3%E9%87%8A/</link>
       <pubDate>Wed, 17 Dec 2025 00:34:00 +0800</pubDate>
-      <guid>/docs/description/description/</guid>
-      <description>&lt;p&gt;用于解释说明该文档&lt;/p&gt;&#xA;&lt;h2 id=&#34;这是什么&#34;&gt;这是什么？&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;这是用于跳转至文档界面的跳板&lt;/li&gt;&#xA;&lt;li&gt;可以在左侧看到文档的目录&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <guid>/docs/description/description-%E8%A7%A3%E9%87%8A/</guid>
+      <description>&lt;div style=&#34;width:100%;&#34;&gt;&#xA;  &lt;div style=&#34;&#xA;    display:flex;&#xA;    max-width:1100px;&#xA;    margin:0 auto;&#xA;    gap:2rem;&#xA;  &#34;&gt;&#xA;    &lt;div style=&#34;&#xA;      flex:1;&#xA;      display:flex;&#xA;      flex-direction:column;&#xA;    &#34;&gt;&#xA;&lt;h2 id=&#34;whats-this&#34;&gt;What&amp;rsquo;s this?&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;This is a jump pad used to navigate to the document interface.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;On the computer&lt;/strong&gt;, you can see the document&amp;rsquo;s table of contents on the &lt;strong&gt;left side&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;On mobile&lt;/strong&gt;, you can click the &lt;strong&gt;button&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; class=&#34;icon icon-tabler icon-tabler-dots-vertical&#34; width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&#xA;&lt;path stroke=&#34;none&#34; d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;&gt;&lt;/path&gt;&#xA;&lt;path d=&#34;M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0&#34;&gt;&lt;/path&gt;&#xA;&lt;path d=&#34;M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0&#34;&gt;&lt;/path&gt;&#xA;&lt;path d=&#34;M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0&#34;&gt;&lt;/path&gt;&#xA;&lt;/svg&gt; in the upper right corner&lt;/strong&gt; to see the document&amp;rsquo;s table of contents.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;The documents on this site are written in both Chinese and English;&#xA;for ease of reading, subsequent documents will be placed separately.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
