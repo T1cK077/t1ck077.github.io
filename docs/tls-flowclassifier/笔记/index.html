@@ -14,13 +14,12 @@
 
 <link rel="stylesheet" href="/main.b38cbf3fe93d23adedbb745ddf033dd47b6a571da4beab2bcd850572119b1fd556840844244343743bedf3fa152074ae657f5bb205a0f01500e4a732dbd0e729.css" integrity="sha512-s4y/P+k9I63tu3Rd3wM91HtqVx2kvqsrzYUFchGbH9VWhAhEJENDdDvt8/oVIHSuZX9bsgWg8BUA5Kcy29DnKQ==" crossorigin="anonymous">
 
-<noscript><style>img.lazyload { display: none; }</style></noscript><base href="/">
+<noscript><style>img.lazyload { display: none; }</style></noscript><base href="/docs/tls-flowclassifier/%E7%AC%94%E8%AE%B0/">
 
-  <link rel="canonical" href="/">
+  <link rel="canonical" href="/docs/tls-flowclassifier/%E7%AC%94%E8%AE%B0/">
 
-  <link rel="alternate" type="application/rss+xml" href="/index.xml" title="TICK077">
 
-<title>TICKING~</title>
+<title>笔记  |  TICK077</title>
 <meta name="description" content="Tick&#39;s technical blog~">
 
     
@@ -48,54 +47,68 @@
       >
 <link rel="manifest" href="/manifest.webmanifest">
 
-<meta property="og:url" content="/">
+<meta property="og:url" content="/docs/tls-flowclassifier/%E7%AC%94%E8%AE%B0/">
   <meta property="og:site_name" content="TICK077">
-  <meta property="og:title" content="TICK077">
-  <meta property="og:description" content="Tick&#39;s technical blog~">
+  <meta property="og:title" content="笔记">
+  <meta property="og:description" content="本篇为TICK077的任务进度
+反问 · 复盘
+AI太好用了你们知道吗
+Phase 0 · 边界锁定指引 Step 0.1 定「要分什么」 AI:
+推荐方案（最稳、最容易写论文）：
+👉 应用类型分类（4 类）
+候选类别（暂定前四个） Web Browsing">
   <meta property="og:locale" content="en">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+    <meta property="article:published_time" content="2026-02-09T20:57:00+08:00">
+    <meta property="article:modified_time" content="2026-02-09T20:57:00+08:00">
     <meta property="og:image" content="/cover.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="/cover.png">
-  <meta name="twitter:title" content="TICK077">
-  <meta name="twitter:description" content="Tick&#39;s technical blog~">
+  <meta name="twitter:title" content="笔记">
+  <meta name="twitter:description" content="本篇为TICK077的任务进度
+反问 · 复盘
+AI太好用了你们知道吗
+Phase 0 · 边界锁定指引 Step 0.1 定「要分什么」 AI:
+推荐方案（最稳、最容易写论文）：
+👉 应用类型分类（4 类）
+候选类别（暂定前四个） Web Browsing">
       <meta name="twitter:site" content="@getdoks">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "url": "/",
-      "name": "TICK077",
-      "description": "Tick\u0027s technical blog~"
-    }
-  ]
-}
-</script>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "url": "/",
-      "name": "Thulite",
-      "image": [
-        {
-          "@id": "/cover.png"
-        }
-      ],
-      "logo": {
-        "@id": "/favicon-512x512.png"
-      }
-    }
-  ]
-}
+    
+    
+    <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "/",
+       "name": "Tick077",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "/docs/",
+       "name": "Docs",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "/docs/tls-flowclassifier/",
+       "name": "Tls Flow Classifier",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "name": "笔记",
+       "position": 4
+     }
+   ]
+ }
 </script>
-
 
 
 
@@ -107,7 +120,7 @@
 </head>
 
   
-  <body class="single home" data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -60%" data-bs-smooth-scroll="true" tabindex="0">
+  <body class="single section docs" data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -60%" data-bs-smooth-scroll="true" tabindex="0">
     <div class="sticky-top">
 <header class="navbar navbar-expand-lg">
   <div class="container-lg">
@@ -124,6 +137,98 @@
       </svg>
     </button>
     
+    <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+      </svg>
+    </button>
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavSection" aria-labelledby="offcanvasNavSectionLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavSectionLabel">Docs</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <aside class="doks-sidebar mt-n3">
+          <nav id="doks-docs-nav" aria-label="Tertiary navigation">
+            
+  
+    
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open>
+      <summary>Description</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/docs/description/description-%E8%A7%A3%E9%87%8A/">Description - 解释</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>gitAuto</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/docs/gitauto/gitauto-readme/">gitAuto - README</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>TLS-FlowClassifier</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/docs/tls-flowclassifier/%E4%BB%BB%E5%8A%A1%E5%AF%BC%E5%BC%95%E4%B8%8E%E4%BB%BB%E5%8A%A1%E6%B8%85%E5%8D%95/">任务导引与任务清单</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/docs/tls-flowclassifier/%E7%AC%94%E8%AE%B0/">笔记</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>For myself</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/docs/for-myself/for-myself-%E7%AE%80%E8%A6%81/">For myself - 简要</a>
+  </li>
+
+  <li>
+      <a href="/docs/for-myself/for-myself-%E5%85%B3%E4%BA%8E%E5%86%99%E4%BD%9C/">For myself - 关于写作</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+          </nav>
+        </aside>
+      </div>
+    </div>
     
     <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -148,7 +253,7 @@
       
       <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
         <ul class="navbar-nav flex-grow-1"><li class="nav-item">
-                <a class="nav-link" href="/docs/description/description-%E8%A7%A3%E9%87%8A/">Docs</a>
+                <a class="nav-link active" href="/docs/description/description-%E8%A7%A3%E9%87%8A/" aria-current="true">Docs</a>
               </li>
             <li class="nav-item">
                 <a class="nav-link" href="/blog/">Blog</a>
@@ -253,162 +358,294 @@
       <div class="content">
       
         
-<section class="section section-md">
-  <div class="container">
-
-    <div class="row justify-content-center align-items-center" style="min-height: 400px;">
-      
-
-      <div class="col-lg-5 text-center d-flex flex-column justify-content-center">
-        <div class="row justify-content-center text-center mb-4">
-          <div class="col-lg-12">
-            <img src="/images/avatar.png" class="rounded-circle mx-auto d-block mb-4"
-              style="width:180px;height:180px;object-fit:cover;" alt="avatar">
-            <h1 class="mb-4">TICK077</h1> 
-            <p class="lead mb-3">Unknown person</p>
-            <span class="spoiler">Obscure today.</span><br>
-            <span class="spoiler">Renowned tomorrow.</span>
-          </div>
-        </div>
-
-
-        <a id="funButton" class="btn btn-primary btn-cta rounded-pill my-3 mx-auto d-block" style="width:180px;"
-          href="javascript:void(0);"
-          onclick="const btn=document.getElementById('funButton'); btn.innerText=['Click me again!','Haha!','Try harder!','😎'][Math.floor(Math.random()*4)];"
-          role="button">Useless Button</a>
-      </div>
-
-
-      
-      <div class="col-lg-1 d-none d-lg-flex justify-content-center">
-        <div style="width:1px;background-color:#e5e7eb;"></div>
-      </div>
-
-      
-      <div class="col-lg-5 text-center d-flex flex-column justify-content-center">
-        <h2>你好哇~</h2>
-        <p>这里是TICK，叫我若奇也可以喔</p>
-        <p>如你所见，这里是我的技术博客</p>
-        <p>这里主要分享个人学习笔记~</p>
-        <p>我的生活博客: <a href="https://t1ck.me" target="_blank">t1ck.me</a></p>
-      </div>
-
-    </div>
-
-  </div>
-
-  <style>
-    .spoiler {
-      background-color: #000000;
-      color: #000000;
-       
-      border-radius: 4px;
-      padding: 2px 6px;
-      cursor: pointer;
-      transition: color 0.3s;
-    }
-
-    .spoiler:hover {
-      color: #fff;
-       
-    }
-  </style>
-</section>
-
-
-
-      
-      </div>
-    </div>
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+			
+  
     
-<div class="d-flex justify-content-start">
-  <div class="bg-dots"></div>
+<nav class="section-nav docs-links">
+  <ul class="list-unstyled">
+
+  <li>
+    <details open>
+      <summary>Description</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/docs/description/description-%E8%A7%A3%E9%87%8A/">Description - 解释</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>gitAuto</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/docs/gitauto/gitauto-readme/">gitAuto - README</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open open>
+      <summary>TLS-FlowClassifier</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/docs/tls-flowclassifier/%E4%BB%BB%E5%8A%A1%E5%AF%BC%E5%BC%95%E4%B8%8E%E4%BB%BB%E5%8A%A1%E6%B8%85%E5%8D%95/">任务导引与任务清单</a>
+  </li>
+
+  <li class="active" >
+      <a aria-current="page" href="/docs/tls-flowclassifier/%E7%AC%94%E8%AE%B0/">笔记</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+
+  <li>
+    <details open>
+      <summary>For myself</summary>
+      <ul class="list-unstyled list-nested">
+
+  <li>
+      <a href="/docs/for-myself/for-myself-%E7%AE%80%E8%A6%81/">For myself - 简要</a>
+  </li>
+
+  <li>
+      <a href="/docs/for-myself/for-myself-%E5%85%B3%E4%BA%8E%E5%86%99%E4%BD%9C/">For myself - 关于写作</a>
+  </li>
+      </ul>
+    </details>
+  </li>
+  </ul>
+</nav>
+
+  
+
+		</div>
+		
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="page-links">
+  <h3>On this page</h3>
+    <nav id="toc">
+  <ul>
+    <li><a href="#phase-0--边界锁定指引">Phase 0 · 边界锁定指引</a>
+      <ul>
+        <li><a href="#step-01-定要分什么">Step 0.1 定「要分什么」</a></li>
+        <li><a href="#step-02-定研究的协议边界">Step 0.2 定「研究的协议边界」</a></li>
+        <li><a href="#step-03-定一条-flow-是什么">Step 0.3 定「一条 flow 是什么」</a></li>
+        <li><a href="#step-04-定一条-flow-怎么变成模型输入">Step 0.4 定「一条 flow 怎么变成模型输入」</a></li>
+        <li><a href="#step-05-定phase-0-的最终产出">Step 0.5 定「Phase 0 的最终产出」</a></li>
+      </ul>
+    </li>
+    <li><a href="#phase-1--数据收集">Phase 1 · 数据收集</a></li>
+  </ul>
+</nav>
 </div>
-<section class="section section-md">
-  <div class="container">
 
-    <div class="row justify-content-center text-center mb-4">
-      <div class="col-lg-8">
-        <h2 class="h4">Latest Updates / 最近更新</h2>
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+			<h1>笔记</h1>
+			
+			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
+				<details>
+    <summary>On this page</summary>
+    <div class="page-links">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#phase-0--边界锁定指引">Phase 0 · 边界锁定指引</a>
+      <ul>
+        <li><a href="#step-01-定要分什么">Step 0.1 定「要分什么」</a></li>
+        <li><a href="#step-02-定研究的协议边界">Step 0.2 定「研究的协议边界」</a></li>
+        <li><a href="#step-03-定一条-flow-是什么">Step 0.3 定「一条 flow 是什么」</a></li>
+        <li><a href="#step-04-定一条-flow-怎么变成模型输入">Step 0.4 定「一条 flow 怎么变成模型输入」</a></li>
+        <li><a href="#step-05-定phase-0-的最终产出">Step 0.5 定「Phase 0 的最终产出」</a></li>
+      </ul>
+    </li>
+    <li><a href="#phase-1--数据收集">Phase 1 · 数据收集</a></li>
+  </ul>
+</nav>
+    </div>
+  </details>
+
+			</nav>
+			<blockquote>
+<p>本篇为TICK077的任务进度<br>
+<strong>反问 · 复盘</strong></p>
+</blockquote>
+<blockquote>
+<p>AI太好用了你们知道吗</p>
+</blockquote>
+<hr>
+<h2 id="phase-0--边界锁定指引">Phase 0 · 边界锁定指引<a href="#phase-0--边界锁定指引" class="anchor" aria-hidden="true">#</a> </h2>
+<h3 id="step-01-定要分什么">Step 0.1 定「要分什么」<a href="#step-01-定要分什么" class="anchor" aria-hidden="true">#</a> </h3>
+<blockquote>
+<p>AI:<br>
+<strong>推荐方案（最稳、最容易写论文）：</strong><br>
+👉 <strong>应用类型分类（4 类）</strong></p>
+</blockquote>
+<h4 id="候选类别暂定前四个">候选类别（暂定前四个）<a href="#候选类别暂定前四个" class="anchor" aria-hidden="true">#</a> </h4>
+<ol>
+<li>
+<p><strong>Web Browsing</strong></p>
+<ul>
+<li>普通网页浏览（搜索、文章页）</li>
+</ul>
+</li>
+<li>
+<p><strong>Video Streaming</strong></p>
+<ul>
+<li>视频播放类</li>
+</ul>
+</li>
+<li>
+<p><strong>File Download</strong></p>
+<ul>
+<li>明确的大文件下载行为</li>
+</ul>
+</li>
+<li>
+<p><strong>Instant Messaging</strong></p>
+<ul>
+<li>即时通信（文本为主）</li>
+</ul>
+</li>
+<li>
+<p><strong>Other / Background</strong>（不推荐本科用）</p>
+</li>
+</ol>
+<hr>
+<h3 id="step-02-定研究的协议边界">Step 0.2 定「研究的协议边界」<a href="#step-02-定研究的协议边界" class="anchor" aria-hidden="true">#</a> </h3>
+<ul>
+<li>✅ <strong>TLS 1.3 only</strong></li>
+<li>❌ 不做 TLS 1.2 对比（可写背景，不做实验）</li>
+<li>❌ 不碰 QUIC / HTTP3</li>
+<li>❌ 不解密、不看 SNI、不看证书</li>
+</ul>
+<p>📌 论文可说：</p>
+<blockquote>
+<p>“本文仅基于传输层可观测特征进行分析。”</p>
+</blockquote>
+<hr>
+<h3 id="step-03-定一条-flow-是什么">Step 0.3 定「一条 flow 是什么」<a href="#step-03-定一条-flow-是什么" class="anchor" aria-hidden="true">#</a> </h3>
+<ul>
+<li>五元组：
+<code>(src IP, dst IP, src port, dst port, protocol)</code></li>
+<li>超时时间：
+<strong>60 秒无数据即结束</strong></li>
+</ul>
+<p>📌 原因：</p>
+<ul>
+<li>够简单</li>
+<li>文献常见</li>
+<li>不易被质疑</li>
+</ul>
+<hr>
+<h3 id="step-04-定一条-flow-怎么变成模型输入">Step 0.4 定「一条 flow 怎么变成模型输入」<a href="#step-04-定一条-flow-怎么变成模型输入" class="anchor" aria-hidden="true">#</a> </h3>
+<h4 id="数据包级序列表示">数据包级序列表示<a href="#数据包级序列表示" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li>
+<p>取 <strong>前 N 个包</strong></p>
+</li>
+<li>
+<p>每个包 3 个特征：</p>
+<ol>
+<li><code>pkt_len_signed</code></li>
+<li><code>iat</code></li>
+<li><code>direction</code></li>
+</ol>
+</li>
+</ul>
+<hr>
+<h4 id="n-怎么选">N 怎么选？<a href="#n-怎么选" class="anchor" aria-hidden="true">#</a> </h4>
+<blockquote>
+<p>AI:<br>
+给你结论：</p>
+<ul>
+<li>🟢 <strong>N = 30（推荐）</strong></li>
+<li>可做对比：20 / 50（后面当实验）</li>
+</ul>
+</blockquote>
+<p>📌 30：</p>
+<ul>
+<li>足够包含 TLS 握手</li>
+<li>不会太长</li>
+<li>模型稳定</li>
+</ul>
+<hr>
+<h3 id="step-05-定phase-0-的最终产出">Step 0.5 定「Phase 0 的最终产出」<a href="#step-05-定phase-0-的最终产出" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Phase 0 结束时，<strong>应写在某个地方的 5 行字</strong>：</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <pre tabindex="0"><code>Task: TLS 1.3 encrypted traffic classification
+Classes: Web / Video / Download / IM
+Protocol scope: TLS 1.3 only (no decryption)
+Flow definition: 5-tuple + 60s timeout
+Input representation: first 30 packets, (len, iat, dir)</code></pre>
+  </figure>
+</div>
+<hr>
+<hr>
+<h2 id="phase-1--数据收集">Phase 1 · 数据收集<a href="#phase-1--数据收集" class="anchor" aria-hidden="true">#</a> </h2>
+
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				</div>
+			<div class="page-nav d-flex flex-column flex-sm-row">
+	
+	<div class="card w-100">
+			<div class="card-body d-flex">
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M5 12l6 6"></path>
+						<path d="M5 12l6 -6"></path>
+				 	</svg>
+				</div>
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Prev</div>
+					<a href="/docs/tls-flowclassifier/%E4%BB%BB%E5%8A%A1%E5%AF%BC%E5%BC%95%E4%B8%8E%E4%BB%BB%E5%8A%A1%E6%B8%85%E5%8D%95/" class="stretched-link text-reset text-decoration-none">任务导引与任务清单</a>
+				</div>
+			</div>
+		</div>
+	<div class="m-2"></div>
+	<div class="card text-end w-100">
+			<div class="card-body d-flex justify-content-end">
+				<div class="d-flex flex-column">
+					<div class="text-body-secondary">Next</div>
+					<a href="/docs/for-myself/for-myself-%E7%AE%80%E8%A6%81/" class="stretched-link text-reset text-decoration-none">For myself - 简要</a>
+				</div>
+				<div class="d-flex flex-column justify-content-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M13 18l6 -6"></path>
+						<path d="M13 6l6 6"></path>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+
+			
+		</main>
+		
+	</div>
+
+      
       </div>
     </div>
-
-    <div class="row justify-content-center">
-
-      
-      <div class="col-lg-5 text-center">
-        <h3 class="h6 text-uppercase text-muted mb-3">Docs</h3>
-
-        
-        <div class="mb-2">
-          <a href="/docs/tls-flowclassifier/%E4%BB%BB%E5%8A%A1%E5%AF%BC%E5%BC%95%E4%B8%8E%E4%BB%BB%E5%8A%A1%E6%B8%85%E5%8D%95/" class="text-decoration-none text-body">
-            任务导引与任务清单
-          </a>
-        </div>
-        
-        <div class="mb-2">
-          <a href="/docs/tls-flowclassifier/%E7%AC%94%E8%AE%B0/" class="text-decoration-none text-body">
-            笔记
-          </a>
-        </div>
-        
-        <div class="mb-2">
-          <a href="/docs/gitauto/gitauto-readme/" class="text-decoration-none text-body">
-            gitAuto - README
-          </a>
-        </div>
-        
-        <div class="mb-2">
-          <a href="/docs/for-myself/for-myself-%E5%85%B3%E4%BA%8E%E5%86%99%E4%BD%9C/" class="text-decoration-none text-body">
-            For myself - 关于写作
-          </a>
-        </div>
-        
-        <div class="mb-2">
-          <a href="/docs/for-myself/for-myself-%E7%AE%80%E8%A6%81/" class="text-decoration-none text-body">
-            For myself - 简要
-          </a>
-        </div>
-        
-      </div>
-
-      
-      <div class="col-lg-1 d-none d-lg-flex justify-content-center">
-        <div style="width:1px;background-color:#e5e7eb;"></div>
-      </div>
-
-      
-      <div class="col-lg-5 text-center">
-        <h3 class="h6 text-uppercase text-muted mb-3">Blog</h3>
-
-        
-        <div class="mb-2">
-          <a href="/blog/aboutme-%E5%85%B3%E4%BA%8E%E6%88%91/" class="text-decoration-none text-body">
-            AboutMe - 关于我
-          </a>
-        </div>
-        
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="section section-md">
-  <div class="container">
-
-    <style>
-      .widget-box {
-        width: 350px;
-        height: 500px;
-        border-radius: 8px;
-        overflow: hidden;
-      }
-    </style>
-  </div>
-</section>
-
-    
     
     
     <footer class="footer text-muted">

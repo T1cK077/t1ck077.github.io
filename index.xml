@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright (c) 2020-2024 Thulite</copyright>
-    <lastBuildDate>Fri, 02 Jan 2026 23:57:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 09 Feb 2026 20:57:00 +0800</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Description - 解释</title>
@@ -22,6 +22,20 @@
       <pubDate>Fri, 02 Jan 2026 23:57:00 +0800</pubDate>
       <guid>/docs/gitauto/gitauto-readme/</guid>
       <description>&lt;p&gt;GitHub: &lt;a href=&#34;https://github.com/TICK077/gitAuto&#34;&gt;gitAuto&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;#-%e7%89%b9%e6%80%a7&#34;&gt;中文版本README&lt;/a&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;gitauto&#34;&gt;gitAuto&lt;/h1&gt;&#xA;&lt;p&gt;&lt;code&gt;gitAuto&lt;/code&gt; is a &lt;strong&gt;Lightweight Git Auto-Commit / Push Tool (Windows only)&lt;/strong&gt;&lt;br&gt;&#xA;designed to automatically execute the &lt;strong&gt;Pull → Wait → Countdown → Commit → Push&lt;/strong&gt; workflow when local files change.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>任务导引与任务清单</title>
+      <link>/docs/tls-flowclassifier/%E4%BB%BB%E5%8A%A1%E5%AF%BC%E5%BC%95%E4%B8%8E%E4%BB%BB%E5%8A%A1%E6%B8%85%E5%8D%95/</link>
+      <pubDate>Mon, 09 Feb 2026 20:57:00 +0800</pubDate>
+      <guid>/docs/tls-flowclassifier/%E4%BB%BB%E5%8A%A1%E5%AF%BC%E5%BC%95%E4%B8%8E%E4%BB%BB%E5%8A%A1%E6%B8%85%E5%8D%95/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h1 id=&#34;基于1d-cnn的tls-13加密流量分类&#34;&gt;基于1D-CNN的TLS 1.3加密流量分类&lt;/h1&gt;&#xA;&lt;h4 id=&#34;tls-13-encrypted-traffic-classification-based-on-1d-cnn&#34;&gt;TLS 1.3 Encrypted Traffic Classification Based on 1D-CNN&lt;/h4&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;这是一篇关于TICK077本科毕业论文的任务导引&lt;br&gt;&#xA;所以内容不保证正确&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;任务导引&#34;&gt;任务导引&lt;/h2&gt;&#xA;&lt;p&gt;随着网络通信加密技术的不断发展，TLS 1.3 协议已被广泛部署于各类网络应用中。相比于早期版本，TLS 1.3 进一步加强了对通信内容、证书及握手信息的加密保护，使得传统基于深度包检测（Deep Packet Inspection, DPI）的流量识别方法逐渐失效。然而，在网络管理、流量调度以及安全态势感知等应用场景中，仍然需要对加密流量进行有效分类。因此，在不破坏加密机制、不解密通信内容的前提下，对 TLS 1.3 加密流量进行分类研究，具有重要的现实意义。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>笔记</title>
+      <link>/docs/tls-flowclassifier/%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 09 Feb 2026 20:57:00 +0800</pubDate>
+      <guid>/docs/tls-flowclassifier/%E7%AC%94%E8%AE%B0/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;本篇为TICK077的任务进度&lt;br&gt;&#xA;&lt;strong&gt;反问 · 复盘&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;AI太好用了你们知道吗&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;phase-0--边界锁定指引&#34;&gt;Phase 0 · 边界锁定指引&lt;/h2&gt;&#xA;&lt;h3 id=&#34;step-01-定要分什么&#34;&gt;Step 0.1 定「要分什么」&lt;/h3&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;AI:&lt;br&gt;&#xA;&lt;strong&gt;推荐方案（最稳、最容易写论文）：&lt;/strong&gt;&lt;br&gt;&#xA;👉 &lt;strong&gt;应用类型分类（4 类）&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h4 id=&#34;候选类别暂定前四个&#34;&gt;候选类别（暂定前四个）&lt;/h4&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Web Browsing&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>For myself - 简要</title>
