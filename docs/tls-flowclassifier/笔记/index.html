@@ -442,7 +442,12 @@ Phase 0 · 边界锁定指引 Step 0.1 定「要分什么」 AI:
         <li><a href="#step-05-定phase-0-的最终产出">Step 0.5 定「Phase 0 的最终产出」</a></li>
       </ul>
     </li>
-    <li><a href="#phase-1--数据收集">Phase 1 · 数据收集</a></li>
+    <li><a href="#phase-1--数据收集">Phase 1 · 数据收集</a>
+      <ul>
+        <li><a href="#11-抓包环境">1.1 抓包环境</a></li>
+        <li><a href="#12-确认流量">1.2 确认流量</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </div>
@@ -467,7 +472,12 @@ Phase 0 · 边界锁定指引 Step 0.1 定「要分什么」 AI:
         <li><a href="#step-05-定phase-0-的最终产出">Step 0.5 定「Phase 0 的最终产出」</a></li>
       </ul>
     </li>
-    <li><a href="#phase-1--数据收集">Phase 1 · 数据收集</a></li>
+    <li><a href="#phase-1--数据收集">Phase 1 · 数据收集</a>
+      <ul>
+        <li><a href="#11-抓包环境">1.1 抓包环境</a></li>
+        <li><a href="#12-确认流量">1.2 确认流量</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -598,6 +608,92 @@ Input representation: first 30 packets, (len, iat, dir)</code></pre>
 <hr>
 <hr>
 <h2 id="phase-1--数据收集">Phase 1 · 数据收集<a href="#phase-1--数据收集" class="anchor" aria-hidden="true">#</a> </h2>
+<h3 id="11-抓包环境">1.1 抓包环境<a href="#11-抓包环境" class="anchor" aria-hidden="true">#</a> </h3>
+<ul>
+<li>使用pyshark进行抓包</li>
+</ul>
+<p>📌  为什么？</p>
+<ul>
+<li>可自定义抓取类型</li>
+<li>可自定义生成文件</li>
+</ul>
+<p>过程：</p>
+<ul>
+<li>
+<p>项目开始使用过滤器如下：</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <pre tabindex="0"><code>display_filter = &#34;tls.record.version == 0x0304&#34;</code></pre>
+  </figure>
+</div>
+</li>
+<li>
+<p>后改为：</p>
+
+
+
+<div class="expressive-code">
+  <figure class="frame not-content">
+  <figcaption class="header">
+    <span class="title"></span>
+  </figcaption>
+  <pre tabindex="0"><code>tls.handshake.extensions.supported_version == 0x0304 or tls.record.version == 0x0304</code></pre>
+  </figure>
+</div>
+</li>
+<li>
+<p>注意到无法正常抓取期望数据包及流，原因如下：</p>
+<ul>
+<li><code>0x0304</code> 确实是 TLS 1.3 的版本号，但 某些客户端/服务端在握手时<strong>可能还会用</strong> <code>TLS 1.2（0x0303）</code></li>
+<li><code>display_filter</code> 太严格，导致每个 TLS 1.3 相关流里匹配的包极少（通常只有 1–4 个：ClientHello + ServerHello + 少量 Finished/ChangeCipherSpec/Application Data）</li>
+</ul>
+</li>
+<li>
+<p>这个条件只匹配：</p>
+<ul>
+<li>ClientHello/ServerHello 中明确声明支持 TLS 1.3 的包</li>
+<li>握手完成后 record.version = 0x0304 的加密数据包</li>
+</ul>
+</li>
+<li>
+<p>但一个完整 TLS 1.3 会话的前 30 个包里，满足这个条件的往往只有少数几个（握手包少，后续数据包如果还没大量传输，就匹配不上）。</p>
+</li>
+<li>
+<p>结果：大多数流只有 1–5 个包，自然达不到 10 个包的门槛。</p>
+</li>
+<li>
+<p>所以，做出如下核心改动：</p>
+<ul>
+<li>把 display_filter 改成 <code>tcp.port == 443</code>（最宽松，能抓到完整 TLS 流量，包括 TLS 1.3 的握手和后续数据包）</li>
+<li>去掉 <code>if not hasattr(pkt, 'tls'):</code> 的限制（因为 display_filter 已经保证有 TLS 相关流量）</li>
+<li>保留 MIN_PACKETS_PER_FLOW = 10（现在包数会多很多，流长度会变长，能轻松超过 10）</li>
+</ul>
+</li>
+<li>
+<p>改动后效果显著</p>
+</li>
+</ul>
+<hr>
+<h3 id="12-确认流量">1.2 确认流量<a href="#12-确认流量" class="anchor" aria-hidden="true">#</a> </h3>
+<ul>
+<li>
+<p>通过脚本生成的<code>.pacp</code>文件，设定<code>TLS</code>过滤器后观察到大部分流量都是 <code>TLS 1.3</code>，说明：</p>
+<ul>
+<li>当前采集的数据高度符合研究主题（基于深度学习的 TLS 1.3 加密流量分类）</li>
+<li>放宽到 <code>tcp.port == 443</code> 的采集方式是正确的：既抓到了完整流（长度足够长），又保持了很高的 TLS 1.3 纯度（大部分包/流都协商成了 1.3）</li>
+<li>少量混入的 TLS 1.2 比例很低，对模型影响几乎可以忽略（本科论文完全接受，甚至很多论文都不额外过滤）</li>
+</ul>
+</li>
+<li>
+<p>数据误差处于可接受范围内</p>
+</li>
+</ul>
 
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				</div>
