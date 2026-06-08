@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
+<html lang="zh-CN" data-bs-theme="auto">
   <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -56,7 +56,7 @@ AI太好用了你们知道吗
 推荐方案（最稳、最容易写论文）：
 👉 应用类型分类（4 类）
 候选类别（暂定前四个） Web Browsing">
-  <meta property="og:locale" content="en">
+  <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
     <meta property="article:published_time" content="2026-02-09T20:57:00+08:00">
@@ -709,45 +709,45 @@ Input representation: first 30 packets, (len, iat, dir)</code></pre>
 </ol>
 <h4 id="4类典型固定访问流程建议">4类典型固定访问流程建议<a href="#4类典型固定访问流程建议" class="anchor" aria-hidden="true">#</a> </h4>
 <table>
-  <thead>
-      <tr>
-          <th>类别</th>
-          <th>固定访问流程（推荐脚本化）</th>
-          <th>时长 / 次数建议</th>
-          <th>预期流量特征（论文可写）</th>
-          <th>备注 / 脚本工具建议</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>Web Browsing</strong> <br> <strong>普通网页浏览</strong></td>
-          <td>1. 清空浏览器缓存 &amp; Cookie<br>2. 打开 Chrome/Edge 新隐身窗口<br>3. 依次访问 8–10 个固定/半固定网站列表（顺序固定）<br>   示例列表：baidu.com → wikipedia.org/zh → zhihu.com/hot → taobao.com → jd.com → bilibili.com/read → news.qq.com<br>4. 每个页面停留 20–40 秒（固定随机范围）<br>5. 随机滚动页面 2–3 次，点击 1–2 个链接（可选随机）<br>6. 循环 2–3 轮</td>
-          <td>5–8 分钟<br>或完成 2–3 轮</td>
-          <td>多短连接、小包双向交错、突发性下载图片/JS</td>
-          <td>Selenium + Python 最稳</td>
-      </tr>
-      <tr>
-          <td><strong>Video Streaming</strong> <br> <strong>视频播放类</strong></td>
-          <td>1. 关闭其他视频标签/应用<br>2. 打开 YouTube/Bilibili PC 网页或 App<br>3. 搜索固定关键词（如“风景 4K”或“科技评测”）<br>4. 选择搜索结果第 2–4 个视频（避免广告位）<br>5. 全屏播放，强制 1080p 或 720p（固定分辨率）<br>6. 连续播放 3–5 个完整短视频（每个 3–8 分钟）<br>7. 不跳过、不暂停、不快进<br>8. 中间可随机拖动进度条 1 次（模拟用户）</td>
-          <td>8–12 分钟<br>或 3–5 个视频</td>
-          <td>长连接、持续大下行包、包间间隔相对稳定</td>
-          <td>Selenium 或 Appium（手机端）</td>
-      </tr>
-      <tr>
-          <td><strong>File Download</strong> <br> <strong>明确的大文件下载行为</strong></td>
-          <td>1. 打开浏览器或下载工具<br>2. 依次访问 4–6 个固定下载源（避免 CDN 缓存影响）<br>   示例：下载 Speedtest 大文件、Ubuntu ISO、开源数据集 zip、百度网盘共享文件<br>3. 每个文件下载完成后立即开始下一个（不删除）<br>4. 固定下载路径，不中断<br>5. 如果网速快，可限制带宽或选更大文件</td>
-          <td>5–10 分钟<br>或完成 4–6 个文件</td>
-          <td>极长连接、几乎纯下行、大包连续、少上行</td>
-          <td>Python requests + wget 脚本化</td>
-      </tr>
-      <tr>
-          <td><strong>Instant Messaging</strong> <br> <strong>即时通信（文本为主）</strong></td>
-          <td>1. 打开微信/QQ PC 版（最好新建小号或专用聊天窗口）<br>2. 固定操作序列：<br>   - 发送 20–30 条文字消息（固定内容模板 + 少量随机）<br>   - 发送 5–8 张图片（从固定文件夹选）<br>   - 发送 3–5 条语音（录制固定时长 5–10 秒）<br>   - 刷朋友圈/空间 1–2 分钟（滚动查看 20–30 条）<br>   - 发起 1 次短语音通话（10–20 秒）<br>3. 对方回复固定内容（可自问自答或用小号配合）</td>
-          <td>6–10 分钟</td>
-          <td>短连接高频、小包双向、包长变化大、突发性</td>
-          <td>AutoHotkey 或 PyAutoGUI 模拟键盘/鼠标</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>类别</th>
+					<th>固定访问流程（推荐脚本化）</th>
+					<th>时长 / 次数建议</th>
+					<th>预期流量特征（论文可写）</th>
+					<th>备注 / 脚本工具建议</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>Web Browsing</strong> <br> <strong>普通网页浏览</strong></td>
+					<td>1. 清空浏览器缓存 &amp; Cookie<br>2. 打开 Chrome/Edge 新隐身窗口<br>3. 依次访问 8–10 个固定/半固定网站列表（顺序固定）<br>   示例列表：baidu.com → wikipedia.org/zh → zhihu.com/hot → taobao.com → jd.com → bilibili.com/read → news.qq.com<br>4. 每个页面停留 20–40 秒（固定随机范围）<br>5. 随机滚动页面 2–3 次，点击 1–2 个链接（可选随机）<br>6. 循环 2–3 轮</td>
+					<td>5–8 分钟<br>或完成 2–3 轮</td>
+					<td>多短连接、小包双向交错、突发性下载图片/JS</td>
+					<td>Selenium + Python 最稳</td>
+			</tr>
+			<tr>
+					<td><strong>Video Streaming</strong> <br> <strong>视频播放类</strong></td>
+					<td>1. 关闭其他视频标签/应用<br>2. 打开 YouTube/Bilibili PC 网页或 App<br>3. 搜索固定关键词（如“风景 4K”或“科技评测”）<br>4. 选择搜索结果第 2–4 个视频（避免广告位）<br>5. 全屏播放，强制 1080p 或 720p（固定分辨率）<br>6. 连续播放 3–5 个完整短视频（每个 3–8 分钟）<br>7. 不跳过、不暂停、不快进<br>8. 中间可随机拖动进度条 1 次（模拟用户）</td>
+					<td>8–12 分钟<br>或 3–5 个视频</td>
+					<td>长连接、持续大下行包、包间间隔相对稳定</td>
+					<td>Selenium 或 Appium（手机端）</td>
+			</tr>
+			<tr>
+					<td><strong>File Download</strong> <br> <strong>明确的大文件下载行为</strong></td>
+					<td>1. 打开浏览器或下载工具<br>2. 依次访问 4–6 个固定下载源（避免 CDN 缓存影响）<br>   示例：下载 Speedtest 大文件、Ubuntu ISO、开源数据集 zip、百度网盘共享文件<br>3. 每个文件下载完成后立即开始下一个（不删除）<br>4. 固定下载路径，不中断<br>5. 如果网速快，可限制带宽或选更大文件</td>
+					<td>5–10 分钟<br>或完成 4–6 个文件</td>
+					<td>极长连接、几乎纯下行、大包连续、少上行</td>
+					<td>Python requests + wget 脚本化</td>
+			</tr>
+			<tr>
+					<td><strong>Instant Messaging</strong> <br> <strong>即时通信（文本为主）</strong></td>
+					<td>1. 打开微信/QQ PC 版（最好新建小号或专用聊天窗口）<br>2. 固定操作序列：<br>   - 发送 20–30 条文字消息（固定内容模板 + 少量随机）<br>   - 发送 5–8 张图片（从固定文件夹选）<br>   - 发送 3–5 条语音（录制固定时长 5–10 秒）<br>   - 刷朋友圈/空间 1–2 分钟（滚动查看 20–30 条）<br>   - 发起 1 次短语音通话（10–20 秒）<br>3. 对方回复固定内容（可自问自答或用小号配合）</td>
+					<td>6–10 分钟</td>
+					<td>短连接高频、小包双向、包长变化大、突发性</td>
+					<td>AutoHotkey 或 PyAutoGUI 模拟键盘/鼠标</td>
+			</tr>
+	</tbody>
 </table>
 <h4 id="实现建议从手动--自动化">实现建议（从手动 → 自动化）<a href="#实现建议从手动--自动化" class="anchor" aria-hidden="true">#</a> </h4>
 <ul>
